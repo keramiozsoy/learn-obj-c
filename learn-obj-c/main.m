@@ -10,32 +10,32 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    
+    
+        int sayi = 10;
+        if (sayi == 10) {
+            NSLog(@" sayi esit");
+        }else if (sayi > 10){
+            NSLog(@" sayi buyuk");
+        }else {
+            NSLog(@" sayi kucuk");
+        }
         
-        // int, double, float, char, BOOL, string, nslog,
         
-        int sayi1 = 10;
-        sayi1 = 20;
+        int swichSayi = 30;
         
-        float sayi2 = 123.12;
-        sayi2 = sayi2 + sayi2;
-        
-        double sayi3 = 1231231.1231231231;
-        
-        BOOL bl = YES;
-        bl = NO;
-        
-        NSString *str = @" deneme ";
-        NSLog(@"lol log : sayi1: %d ", sayi1);
-        
-        // bu bir yorum satiri
-        
-        /*
-         
-         Bir çok satırlı yorum satiri
-         
-         */
+        switch (swichSayi) {
+            case 20:
+                NSLog(@"sayi 10 a esittir");
+                break;
+            case 10:
+                NSLog(@"sayi 10 a esittir");
+            break;
+                
+            default:
+                NSLog(@"sayi degeri : %d ", swichSayi);
+                break;
+        }
         
         
     }

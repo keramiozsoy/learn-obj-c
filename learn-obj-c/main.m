@@ -8,38 +8,68 @@
 
 #import <Foundation/Foundation.h>
 
+// c fonksiyonları
+int sayilariTopla(int sayi1, int sayi2){
+    return sayi1 + sayi2;
+}
+
+void sayilariTopla2(int sayi2){
+    while(1){
+        return; // this stopped method;
+    }
+}
+
+
+// objective c fonksiyonları
+
+NSNumber* herseyiFloatOlarakTopla (NSNumber *sayi1, NSNumber *sayi2){
+    return [NSNumber numberWithFloat: ([sayi1 floatValue] + [sayi2 floatValue])] ;
+}
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
         
-        // for each
         
-        NSMutableArray *array  = [[NSMutableArray alloc] init];
-        [array addObject:@"val1"];
-        [array addObject:@"val2"];
-        [array addObject:@"val3"];
+      
         
-        for (NSString *temp in array) {
-            NSLog(@" %@ ", temp);
-        }
+        // fonksiyon çağrımları
+        // metot - fonksiyon farkı
+        // metot - çağrımı
+        
+        
+        
+        // nsnumber
+        
+        NSNumber *sayi0 = [[NSNumber alloc]init];
+        NSLog(@" %@ ", sayi0);
+        
+        NSNumber *sayi1 = [NSNumber numberWithInt:2];
+        NSLog(@" %@ ", sayi1);
+        
+        NSNumber *sayi2 = [NSNumber numberWithFloat:3.2];
+        NSLog(@" %@ ", sayi2);
+        NSLog(@" %f ", [sayi2 floatValue]);
+        
+        NSNumber *sayi3 = [NSNumber numberWithFloat:4.2];
+               NSLog(@" %@ ", sayi3);
+        
+        NSNumber *sonuc = [NSNumber numberWithFloat:( [sayi2 floatValue] + [sayi3 floatValue]) ];
+        
+        NSLog(@" sonuc --> %@ ", sonuc);
         
         NSLog(@" -- ");
         
-        // dictionary aslında key-value map tir. key ile objelere ulaşılır
         
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        NSLog(@" Sayilari toplat ");
         
-        [dic setObject:@"deneme1" forKey:@"ilk"];
+        NSNumber *floatlariTopladim = herseyiFloatOlarakTopla(sayi2,sayi3);
         
-        NSLog(@" dic --> %@ ", [dic objectForKey:@"ilk"]);
-        NSLog(@" dic --> %@ ", [dic objectForKey:@"iki"]);
-        
-    
-        NSLog(@" -- ");
-        
-        
+        NSLog(@" sonuc -->  %@  ", floatlariTopladim);
         
         
     }
     return 0;
 }
+

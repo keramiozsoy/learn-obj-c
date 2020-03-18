@@ -11,40 +11,36 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
-        // while
+        // sinif olan bir veri tipi ile bir değişken tanımlanırsa önüne * işareti getirilir.
+        // alloc hafizadan yer ayiriyor
+        // @ string değerini karşılıyor
         
-        int i = 0;
-        while (i<10) {
-            
-            if (i == 4){
-                break;
-            }
-            
-            i = i + 1;
-            NSLog(@" %d ",i);
-            
-        }
         
-        NSLog(@" -- ");
-     
+        // NSArray         listesi degismez dizi
+        // NSMutableArray  listesi degisebilen dizi
         
-        // do while
+        NSMutableArray *dizi = [[NSMutableArray alloc] init];
+        NSMutableArray *dizi2 = [NSMutableArray array];
         
-        int j = 2;
-        do {
-            j++;
-            NSLog(@" %d ",j);
-        } while (j <5);
+         
+        [dizi addObject:@"eleman1"];
+        [dizi addObject:@"eleman2"];
+        [dizi addObject:@"eleman3"];
+        
+        [dizi2 addObject:@"eleman1"];
+        [dizi2 addObject:@"eleman2"];
+        [dizi2 addObject:@"eleman3"];
+        
+        NSLog(@" ikinci eleman --> %@  ", [dizi objectAtIndex:1]);
+        NSLog(@" ikinci eleman --> %@  ", [dizi2 objectAtIndex:1]);
         
         NSLog(@" -- ");
         
-        // for
         
-        for (int i = 1; i<3; i++){
-            NSLog(@"%d",i);
-        }
+        NSArray *degismezDizi = [[NSArray alloc] initWithObjects:@"eleman1",@"eleman2", nil];
         
-        NSLog(@" -- ");
+        //  [degismezDizi addObject:@"eleman0"]; // bu satır çalışmaz
+        
         
     
         

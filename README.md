@@ -2,18 +2,18 @@
 
 every branch has different project
 
-lesson 1
+lesson 1 NSLog
 
-lesson 2
+lesson 2 int float double
 
-lesson 3
+lesson 3 if else if , switch case
 
-lesson 4
+lesson 4 NSMutableString , NSString
 
-lesson 5
+lesson 5 while , do-while , for
 
-lesson 6
+lesson 6 NSMutableArray , NSArray
 
-lesson 8 
+lesson 8 NSMutableDictionary
 
-lesson 9 
+lesson 9  c functions , objective c functions , NSNumber 
